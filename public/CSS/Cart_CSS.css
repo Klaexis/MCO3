@@ -1,0 +1,150 @@
+:root {
+	--border-color: grey;
+}
+
+/* Header */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: grey;
+}
+.b25 {
+    background: black;
+}
+.b1 {
+    background: grey;
+}
+.outlineNone {
+    outline: none !important;
+    border:none;
+}
+.a:hover img {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05,1.05);
+    border: 1px solid #1b1b1b !important;
+}
+.aBord-none:hover img {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05,1.05);
+}
+.gotopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 4.5%;
+    right: 5%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    z-index: 15
+}
+.container-fluid {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+/* Cart */
+.shopping-cart {
+    width: 40%;
+    /* height: 423px; */
+    margin: 80px auto;
+    background: #FFFFFF;
+   
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    height: 75px;
+    border-bottom: 10px solid var(--border-color);
+    padding: 20px 30px;
+    color: #5E6977;
+    font-size: 18px;
+    font-weight: 400;
+}
+.header-table {
+    align-content: center;
+}
+.header-table th span {
+    margin-right: 80px;
+}
+.item, 
+.last-item {
+    padding: 20px 30px;
+    height: 120px;
+    display: flex;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.last-item {
+    border-bottom: 11px solid var(--border-color);
+    padding: 20px 30px;
+}
+.selectbox, 
+.image, 
+.price, 
+.remove {
+    align-self: center;
+}
+.selectbox {
+    margin-left: 10px;
+    margin-right: 20px;
+    align-self: center;
+}
+.image {
+    margin-right: 50px;
+    width: 100px;
+}
+.product-img {
+    height: 100%;
+    width: 100px;
+}
+.product-name, 
+.product-author {
+    width: 80px;
+    align-self: center;
+    margin-right: 60px;
+}
+.price {
+    width: 83px;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+}
+.remove {
+    width: 14px;
+    height: 14px;
+	padding-bottom: 20px;
+	font-size: 14px;
+	font-family: 'Open Sans';
+	font-weight: 600;
+	color: #E44C4C;
+	cursor: pointer;
+}
+.end-table {
+    align-content: center;
+}
+.end-table th span {
+    margin-right: 150px;
+}
+.end-table th:last-child input{
+    margin-left: 150px;
+}
+@media (max-width: 800px) {
+    .shopping-cart {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .item {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image,
+    .description {
+        width: 100%;
+        text-align: center;
+        margin: 6px 0;
+    }
+}

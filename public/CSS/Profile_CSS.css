@@ -1,0 +1,83 @@
+body{
+    font-family: Montserrat, sans-serif;
+    background-repeat: no-repeat;
+    background-image: url('../Images/Profile/background.jpg');
+    background-size: cover;
+}
+
+.containerProfile{
+    margin: 100px auto;
+    background: #171a21;
+    color: #c7d5e0;
+    border-radius: 5px;
+    width: 500px;
+    height: 600px;
+    text-align: center;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,.75);
+}
+
+.cover-photo{
+    align-self: center;
+    height: 250px;
+    width: 670px;
+    border-radius: 5px 5px 0 0;
+}
+
+.profile-photo{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 30px 0 0 -175px;
+    border: 1px solid #1f1a32;
+    padding: 7px;
+    background: #66c0f4;
+}
+
+.profile-name{
+    font-size: 25px;
+    font-weight: bold;
+    margin: -70px 0 0 0px;
+}
+
+.description {
+    margin: -20px 0 0 50px;
+    text-align: justify;
+    background-color: #2a475e;
+    color: black;
+    font-weight: 600;
+    width: 400px;
+    height: 300px
+}
+
+.about{
+    margin-top: 35px;
+    line-height: 21px;
+}
+
+button{
+    margin: 10px 0 40px 0;
+}
+
+.profBtn{
+    background: #03bfbc;
+    border: 1px solid #03bfbc;
+    padding: 10px 25px;
+    color: #231e39;
+    border-radius: 3px;
+    font-family: Montserrat, sans-serif;
+    cursor: pointer;
+}
+
+.profBtn{
+    margin-top: 10px;
+    margin-left: 10px;
+    background: transparent;
+    color: #02899c;
+}
+
+.profBtn:hover{
+    color: #231e39;
+    background: #03bfbc;
+    transition: .5s;
+}
+
