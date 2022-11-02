@@ -1,7 +1,7 @@
-//Only run once to prevent redundant data
+
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://Aleck:Aleck10252002@atrium.ogyfrc6.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb://localhost/ArtGallery");
 
 const Artist = require('./Models/Artist');
 
