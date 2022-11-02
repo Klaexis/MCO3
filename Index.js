@@ -1,6 +1,8 @@
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/javascript.js to edit this template
- */
+const express = require("express");
+const mongoose = require("mongoose");
 
+const routes = require('./route.js');
 
+const session = require('express-session');
+
+mongoose.connect("mongodb://localhost/ArtGallery");
