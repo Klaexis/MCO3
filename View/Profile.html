@@ -2,8 +2,8 @@
 <html>
     <head>
         <title>User Profile</title>
-        <link rel="stylesheet" href="CSS/Profile_CSS.css" type="text/css">
-        <link rel="stylesheet" type="text/css" href="CSS/Home_CSS.css" />
+        <link rel="stylesheet" href="../public/CSS/Profile_CSS.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../public/CSS/Home_CSS.css" />
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
     </head>
@@ -17,7 +17,7 @@
 
             <div class="row b1 align-items-center p-1  text-light">
                 <div class="col-6 col-md-2 ">
-                    <a href="Home.html" class="link ml-1"><img src="Images/Menu IMG/art_icon.jpg" alt="" loading="lazy" width="70" height="40"></a>
+                    <a href="Home.html" class="link ml-1"><img src="../public/Images/Menu IMG/art_icon.jpg" alt="" loading="lazy" width="70" height="40"></a>
                 </div>
                 <div class="col-md-8  d-none d-md-block ">
                     <form class="form-inline float-right mr-3">
@@ -45,7 +45,7 @@
         <!-- profile start -->
         <div class="containerProfile">
             <div class="cover-photo">
-                <img src="Images/Profile/squirtle.jpg" class="profile-photo">
+                <img src="../public/Images/Profile/squirtle.jpg" class="profile-photo">
             </div>
             
             <div class="profile-name">SQUIRTLE POGGIES</div>
@@ -74,16 +74,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript">
-    $('.profBtn').click(function() {
-        $('#description div').hide();
-        var target = '#' + $(this).data('target');
-        $(target).show();
-    });
-    
-    const credential = document.getElementById('credentials');
-    credential.style.display = 'none';
-    </script>
+    <script type="text/javascript" src="../public/Javascript/ProfileJS.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </html>
