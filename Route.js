@@ -5,7 +5,7 @@ const app = express();
 const main = require('./Controller/main.js');
 const home = require('./Controller/home.js');
 const profile = require('./Controller/profile.js');
-//const cart = require('./Controller/cart.js');
+const cart = require('./Controller/cart.js');
 
 //Login Page
 app.get('/', main.loadLogin);
@@ -20,6 +20,6 @@ app.post('/Home', home.loadHome);
 app.get('/Profile', profile.loadProfile);
 
 //Cart Page
-
+app.get('/Cart', cart.loadCart);
 
 module.exports = app;
