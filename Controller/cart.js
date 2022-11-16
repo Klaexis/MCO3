@@ -1,15 +1,29 @@
-const Art = require('../Database/Models/Art.js');
-const Artist = require('../Database/Models/Artist.js');
-const User = require('../Database/Models/User');
+const art = require('../Database/Models/Art.js');
+const artist = require('../Database/Models/Artist.js');
+const user = require('../Database/Models/User');
+const Cart = require('../Database/Models/cart.js');
 
-const Cart = {
-    loadCart: async function(req, res){
+const cart = {
+    loadCart: async function(req, res) {
         //Session Handling Soon
         
-        //TODO: Add user dependent products that gets from the database
-        
-        res.render('Cart');
+        const artDetail = await art.find();
+        const artistDetails = await artist.find();
+        const userDetails = await user.find();
+        const cartDetails = await Cart.find();
+
+        Cart.find({}, function(err, rows) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.render('cart', {
+                    artDetail, artistDetails, userDetails, cartDetails,
+                    title : 'Cart',
+                    cart : rows
+                });
+            }
+        });
     }
 };
 
-module.exports = Cart;
+module.exports = cart;
