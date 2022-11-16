@@ -1,0 +1,37 @@
+<%- include("header") -%>
+    <div class="container">
+        <h2><%= title %></h2>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th><input class="form-check-input mt-0" type="checkbox" name="" id="" ></th>
+                    <th>Product</th>
+                    <th>Name</th>
+                    <th>Artist</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cart.forEach(function (cart) { %>
+                    <% let username = "lm021804" %>
+                    <% if (cart.username == username) { %>
+                        <% for (let i = 0; i < cart.artNames.length; i++) { %>
+                            <tr>
+                                <td><input class="form-check-input mt-0" type="checkbox" name="" id=""></td>
+                                <td><img class="image" src="public/Images/Art/<%= cart.artDetails[i].artImage %>" alt="<%= cart.artDetails[i].artImage %>" /></td>
+                                <td><%= cart.artDetails[i].artName %></td>
+                                <td><%= cart.artDetails[i].artistName %></td>
+                                <td><%= cart.artDetails[i].cost %></td>
+                                <td><a href="delete/<%= cart.artNames[i] %>" class="btn btn-sm btn-danger">Delete</a></td>
+                            </tr>
+                        <% } %>
+                    <% } %>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+    <link rel="stylesheet" href="../public/CSS/cart.css">
+    <link rel="stylesheet" href="../public/CSS/style.css">
+</body>
+</html>

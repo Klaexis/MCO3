@@ -1,0 +1,23 @@
+<%- include("header") -%>
+<div class="container">
+    <table>
+        <% product.forEach(function (product) { %>
+            <tr>
+                <div class="product-container">
+                    <div class="product-img-container">
+                        <img src="/public/Images/Art/<%= product.artImage %>" alt="<%= product.artImage %>" class="product-img" />
+                    </div>
+                    <div class="product-desc">
+                        <div class="product-name"><%= product.artName %></div>
+                        <div class="product-artist"><%= product.artistName %></div>
+                        <div class="product-cost">₱<%= product.cost %></div>
+                    </div>
+                    <a href="add/<%= product.id %>" class="btn btn-sm btn-danger">add to cart</a>
+                </div>
+            </tr>
+        <% }); %>
+    </table>
+</div>
+<link rel="stylesheet" href="../public/CSS/product.css">
+<link rel="stylesheet" href="../public/CSS/style.css">
+<%- include("footer") -%>
