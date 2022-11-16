@@ -8,6 +8,7 @@ const User = require('./Models/User');
 async function run(){
     try{
         const user1 = await User.create({
+            username: "la021802",
             userFirstName: "Aleck",
             userLastName: "Lim",
             userPassword: "12345",
@@ -20,6 +21,7 @@ async function run(){
         console.log('created ' + user1);
         
         const user2 = await User.create({
+            username: "lj021803",
             userFirstName: "Jonathan",
             userLastName: "Lin",
             userPassword: "12345",
@@ -32,6 +34,7 @@ async function run(){
         console.log('created ' + user2);
         
         const user3 = await User.create({
+            username: "lm021804",
             userFirstName: "Matteo",
             userLastName: "Locsin",
             userPassword: "12345",
