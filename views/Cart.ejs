@@ -1,207 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><!-- Required meta tags -->
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/CSS/Cart_CSS.css">
-    <title>Shopping Cart</title>
-</head>
-<body id="body-start">
-    <!-- header -->
-    <!-- header -->   
-    <div class="container-fluid">
-        <div class="row align-items-center p-2 b25 text-light">
-            <div class="col-md-3  d-none d-md-block h5 text-center"> Welcome to the Art Gallery</div>
-        </div>
-
-        <div class="row b1 align-items-center p-1  text-light">
-            <div class="col-6 col-md-2 ">
-                <a href="Home.html" class="link ml-1"><img src="../public/Images/Menu IMG/art_icon.jpg" alt="" loading="lazy" width="70" height="40"></a>
-            </div>
-            <div class="col-md-8  d-none d-md-block ">
-                <form class="form-inline float-right mr-3">
-                    <input  class="form-control mr-sm-2 bg-dark border-dark text-danger btn-outline-dark" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn b1  btn-outline-dark my-2 my-sm-0  text-white" type="submit">Search</button>
-                </form>
-            </div>
-            <div class="col-6 col-md-2 pr-3 ">
-                <div class="dropdown float-right ">
-                    <button class="btn b1 text-white dropdown-toggle  btn-outline-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        My Account
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right " aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="profile.html">My Profile</a>
-                        <a class="dropdown-item" href="profile.html">Profile Settings</a>
-                        <a class="dropdown-item" href="#">My Cart</a>
-                        <a class="dropdown-item" href="#">Logout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 p-0">
-                <nav class="navbar navbar-expand-xl navbar-dark b25" />
-            </div>
-        </div>     
-    </div> 
-
-
-    <!-- cart -->
-    <div class="shopping-cart">
-        <!-- Title -->
-        <div class="title">
-            <table class="header-table">
+<%- include("header") -%>
+    <div class="container">
+        <h2><%= title %></h2>
+        <table class="table table-dark table-striped">
+            <thead>
                 <tr>
-                    <th>
-                        <div class="selectbox">
-                            <input type="checkbox">
-                        </div>
-                    </th>
-                    <th><span>Product</span></th>
-                    <th><span>Name</span></th>
-                    <th><span>Author</span></th>
-                    <th><span>Price</span></th>
+                    <th><input class="form-check-input mt-0" type="checkbox" name="" id="" ></th>
+                    <th>Product</th>
+                    <th>Name</th>
+                    <th>Artist</th>
+                    <th>Price</th>
+                    <th>Action</th>
                 </tr>
-            </table>
-        </div>
-
-        <!-- Product 1 -->
-        <div class="item">
-            <div class="selectbox">
-                <input type="checkbox">
-            </div>
-            <div class="image">
-                <img class="product-img" src="../public/Images\Art\mona_lisa.jpg" />
-            </div>
-            <div class="product-name">
-                <a>Mona Lize</a>
-            </div>
-            <div class="product-author">
-                <a>John</a>
-            </div>
-        
-            <div class="price">₱500</div>
-
-            <div class="remove">Remove</div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="item">
-            <div class="selectbox">
-                <input type="checkbox">
-            </div>
-            <div class="image">
-                <img class="product-img" src="../public/Images/Art/creation_of_adam.jpg" />
-            </div>
-            <div class="product-name">
-                <a>Edam's Life</a>
-            </div>
-            <div class="product-author">
-                <a>Jane</a>
-            </div>
-        
-            <div class="price">₱440</div>
-
-            <div class="remove">Remove</div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="item">
-            <div class="selectbox">
-                <input type="checkbox">
-            </div>
-            <div class="image">
-                <img class="product-img" src="../public/Images/Art/starry_night.jpg" />
-            </div>
-            <div class="product-name">
-                <a>Tweerl</a>
-            </div>
-            <div class="product-author">
-                <a>Janel</a>
-            </div>
-        
-            <div class="price">₱450</div>
-
-            <div class="remove">Remove</div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="item">
-            <div class="selectbox">
-                <input type="checkbox">
-            </div>
-            <div class="image">
-                <img class="product-img" src="../public/Images/Art/last_supper.jpg" />
-            </div>
-            <div class="product-name">
-                <a>The Last Brunch</a>
-            </div>
-            <div class="product-author">
-                <a>Jones</a>
-            </div>
-        
-            <div class="price">₱500</div>
-
-            <div class="remove">Remove</div>
-        </div>
-
-        <!-- Product 5 -->
-        <div class="item">
-            <div class="selectbox">
-                <input type="checkbox">
-            </div>
-            <div class="image">
-                <img class="product-img" src="../public/Images/Art/scream.jpg" />
-            </div>
-            <div class="product-name">
-                <a>Otherworld</a>
-            </div>
-            <div class="product-author">
-                <a>Joane</a>
-            </div>
-        
-            <div class="price">₱475</div>
-
-            <div class="remove">Remove</div>
-        </div>
-
-        <!-- Product 6 -->
-        <div class="last-item">
-            <div class="selectbox">
-                <input type="checkbox">
-            </div>
-            <div class="image">
-                <img class="product-img" src="../public/Images/Art/mountain_retreat.jpg" />
-            </div>
-            <div class="product-name">
-                <a>Waifu</a>
-            </div>
-            <div class="product-author">
-                <a>James</a>
-            </div>
-        
-            <div class="price">₱999</div>
-
-            <div class="remove">Remove</div>
-        </div>
-
-        <!-- Total -->
-        <div class="title">
-            <table class="end-table">
-                <tr>
-                    <th>
-                        <span>Total:</span>
-                    </th>
-                    <th><span>₱0</span></th>
-                    <th><input type="submit" value="Checkout"></th>
-                </tr>
-            </table>
-        </div>
+            </thead>
+            <tbody>
+                <% cart.forEach(function (cart) { %>
+                    <% let username = "lm021804" %>
+                    <% if (cart.username == username) { %>
+                        <% for (let i = 0; i < cart.artNames.length; i++) { %>
+                            <tr>
+                                <td><input class="form-check-input mt-0" type="checkbox" name="" id=""></td>
+                                <td><img class="image" src="public/Images/Art/<%= cart.artDetails[i].artImage %>" alt="<%= cart.artDetails[i].artImage %>" /></td>
+                                <td><%= cart.artDetails[i].artName %></td>
+                                <td><%= cart.artDetails[i].artistName %></td>
+                                <td><%= cart.artDetails[i].cost %></td>
+                                <td><a href="delete/<%= cart.artNames[i] %>" class="btn btn-sm btn-danger">Delete</a></td>
+                            </tr>
+                        <% } %>
+                    <% } %>
+                <% }); %>
+            </tbody>
+        </table>
     </div>
+    <link rel="stylesheet" href="../public/CSS/cart.css">
+    <link rel="stylesheet" href="../public/CSS/style.css">
 </body>
 </html>
