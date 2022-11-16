@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="../public/CSS/Home_CSS.css" />
+        <title>Art Fair</title>
+    </head>
+    <body id="body-start" style="background: grey;">
+        <!-- header -->   
+        <div class="container-fluid">
+            <div class="row align-items-center p-2 b25 text-light">
+                <div class="col-md-3  d-none d-md-block h5 text-center"> Welcome to the Art Gallery</div>
+            </div>
+
+            <div class="row b1 align-items-center p-1  text-light">
+                <div class="col-6 col-md-2 ">
+                    <a href="#" class="link ml-1"><img src="../public/Images/Menu IMG/art_icon.jpg" alt="" loading="lazy" width="70" height="40"></a>
+                </div>
+                <div class="col-md-8  d-none d-md-block ">
+                    <form class="form-inline float-right mr-3">
+                        <input  class="form-control mr-sm-2 bg-dark border-dark text-danger btn-outline-dark" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn b1  btn-outline-dark my-2 my-sm-0  text-white" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="col-6 col-md-2 pr-3 ">
+                    <div class="dropdown float-right ">
+                        <button class="btn b1 text-white dropdown-toggle  btn-outline-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My Account
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right " aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/Profile">My Profile</a>
+                            <a class="dropdown-item" href="/Profile">Profile Settings</a>
+                            <a class="dropdown-item" href="/Cart">My Cart</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 p-0">
+                    <nav class="navbar navbar-expand-xl navbar-dark b25">
+
+                        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="outline: none; border: none;">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto  ">
+                                <li class="nav-item dropdown text-center mx-0 mx-lg-3">
+                                    <a class="nav-link dropdown-toggle text-light" href="#" id="dropdownHome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Home
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownHome">
+                                        <a class="dropdown-item" href="#newArt">New Art</a>
+                                        <a class="dropdown-item" href="#artist">Artists</a>
+                                        <a class="dropdown-item" href="#event">Events/Exhibits</a>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item dropdown text-center mx-0 mx-lg-3">
+                                    <a class="nav-link dropdown-toggle text-light" href="#" id="dropdownAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        About
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownAbout">
+                                        <a class="dropdown-item" href="#">About Company</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>     
+            </div> 
+        </div>
+        <!-- header -->
+        
+        <!-- content start -->
+        <div id="carouselMain" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="5000">
+                    <img src="../public/Images/Menu IMG/art_intro.jpg"   alt="starry night" class="menuIMG d-block vw-100">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">WE GUARANTEE QUALITY ART</h3>
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval="5000">
+                    <img src="../public/Images/Menu IMG/art_intro2.png" class="menuIMG d-block vw-100" alt="Starry Night Over The Rhône">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Buy Art Online</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-warning">
+            <h5 class="pt-5  text-center text-uppercase m-0 text-dark d-block d-md-none font-weight-bolder" >WE GUARANTEE QUALITY ART</h5>
+            <p class="text-center  text-dark pb-5 pt-3 m-0 h6 d-md-none font-weight-bolder" >Buy Art Online</p>
+            <h3 class="text-center  text-dark  py-4 m-0 d-none d-md-block font-weight-bolder">Buy Art Online</h3>
+        </div>
+        <!-- slider end -->
+        <!-- new art start -->
+        <div class="container" id="newArt">
+            <br />
+            <h3 class="text-center text-light  py-4 m-0  d-none d-md-block font-weight-bolder"> New Art </h3>
+            
+            <div id="carousel-newArt" class="carousel slide carousel-fade" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-newArt" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-newArt" data-slide-to="1"></li>
+                    <li data-target="#carousel-newArt" data-slide-to="2"></li>
+                    <li data-target="#carousel-newArt" data-slide-to="3"></li> 
+                    <li data-target="#carousel-newArt" data-slide-to="4"></li>
+                    <li data-target="#carousel-newArt" data-slide-to="5"></li>
+                </ol>
+                
+                <div class="carousel-inner" style="border:5px solid black">
+                    <div class="carousel-item active" data-interval="5000">
+                        <!--  <a href="www.google.com" class="aBord-none"> </a> --> 
+                        <!-- When image click result on search -->
+                        
+                        <img src="../public/Images/Art/mountain_retreat.jpg" class="d-block vw-100" alt="Mountain Retreat"  height="500">
+                        
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Mountain Retreat</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="../public/Images/Art/mona_lisa.jpg" class="d-block vw-100" alt="Mona Lisa"  height="500">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Mona Lisa</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="../public/Images/Art/last_supper.jpg" class="d-block vw-100" alt="Last Supper" height="500">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">The Last Supper</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="../public/Images/Art/starry_night.jpg" class="d-block vw-100" alt="The Starry Night"  height="500">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">The Starry Night</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="../public/Images/Art/scream.jpg" class="d-block vw-100" alt="Scream Painting"  height="500">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">The Scream</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="../public/Images/Art/creation_of_adam.jpg" class="d-block vw-100" alt="The Creation Of Adam"  height="500">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">The Creation of Adam</h4>
+                        </div>
+                    </div>                
+                </div>
+                
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#carousel-newArt" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-newArt" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <!-- new art end -->
+        <br/>
+        <!-- artist start -->
+        <div class="container-fluid bg-warning pb-4 px-2" id="artist">
+            <br />
+            <h3 class="text-center text-dark font-weight-bolder"> Artists </h3>
+            
+            <div class="container-fluid b25 my-2 p-2">
+                <div class="container">
+                    <div id="carousel-artist" class="carousel slide carousel-fade" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-artist" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-artist" data-slide-to="1"></li>
+                            <li data-target="#carousel-artist" data-slide-to="2"></li>
+                            <li data-target="#carousel-artist" data-slide-to="3"></li> 
+                            <li data-target="#carousel-artist" data-slide-to="4"></li>
+                        </ol>
+                        
+                        <div class="carousel-inner" style="border:5px solid yellow">
+                            <div class="carousel-item active" data-interval="5000">
+                                <img src="../public/Images/Artist/BOB_ROSS.jpg" class="d-block vw-100" alt="Bob Ross"  height="550">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Bob Ross</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-item" data-interval="5000">
+                                <img src="../public/Images/Artist/Leonardo.jpg" class="d-block vw-100" alt="Leonardo Da Vinci"  height="550">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Leonardo Da Vinci</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-item" data-interval="5000">
+                                <img src="../public/Images/Artist/vincent.jpg" class="d-block vw-100" alt="Vincent Van Gogh"  height="550">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Vincent Van Gogh</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-item" data-interval="5000">
+                                <img src="../public/Images/Artist/edvard.jpg" class="d-block vw-100" alt="Edvard Munch"  height="550">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Edvard Munch</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-item" data-interval="5000">
+                                <img src="../public/Images/Artist/michel.jpg" class="d-block vw-100" alt="Michelangelo"  height="550">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Michelangelo</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#carousel-artist" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-artist" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- artist end -->
+        <br/>
+        <!-- event start -->
+        <div class="container" id="event">
+            <br />
+            <h3 class="text-center text-light  py-4 m-0  d-none d-md-block font-weight-bolder"> Events/Exhibits </h3>
+            
+            <div id="carousel-event" class="carousel slide carousel-fade" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-newArt" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-newArt" data-slide-to="1"></li>
+                    <li data-target="#carousel-newArt" data-slide-to="2"></li>
+                    <li data-target="#carousel-newArt" data-slide-to="3"></li> 
+                </ol>
+                
+                <div class="carousel-inner" style="border:5px solid black">
+                     <div class="carousel-item active" data-interval="5000">
+                         <a href="https://artpiq.net/pages/art-events" > 
+                             <img src="https://i.shgcdn.com/4f257403-f67f-49b1-8d0d-0e8cd87c95a7/-/format/auto/-/preview/3000x3000/-/quality/lighter/" class="d-block vw-100" alt="artpiq"  height="550">
+                         </a>
+                        
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">ARTPIQ Art Exhibitions & Events</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-interval="5000">
+                         <a href="https://artfairphilippines.com/" class="aBord-none"> 
+                             <img src="https://iconicmnl.com/wp-content/uploads/2022/03/Art-Fair-04.jpg" class="d-block vw-100" alt="artfairPH 2022"  height="550">
+                         </a>
+                        
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Art Fair Philippines 2022</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-interval="5000">
+                         <a href="https://www.silverlensgalleries.com/exhibitions/2022-10-06/collectors-plus" class="aBord-none"> 
+                             <img src="https://www.silverlensgalleries.com/assets/exhibitions/2022-10-06/collectors-plus/header-image/srcset/sm/CP-3-Header.jpg" class="d-block vw-100" alt="silverlens gallery"  height="550">
+                         </a>
+                        
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Silverlens Gallery</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-interval="5000">
+                         <a href="https://metmuseum.ph/in-full-view-the-metropolitan-museum-of-manila-collection/" class="aBord-none"> 
+                             <img src="https://files.ocula.com/anzax/89/89e40a64-cc38-4ce4-8a6f-16af4321d6e6_750_470.png" class="d-block vw-100" alt="Metropolitan Museum of Manila"  height="550">
+                         </a>
+                        
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Metropolitan Museum of Manila collection</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#carousel-event" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-event" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <!-- event end -->
+        <br/>
+            
+        <!-- footer -->
+        <!-- scroll go top start -->
+        <a id="myBtn" class="gotopbtn" href="#body-start"><img src="../public/Images/Menu IMG/up.jpg" width="60" height="60" loading="lazy"></a>
+        <!-- scroll end --> 
+    </body>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../public/Javascript/HomeJS.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</html>
