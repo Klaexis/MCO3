@@ -15,6 +15,7 @@ app.get('/Register', main.loadRegister);
 
 //Main/Home Page
 app.post('/Home', home.loadHome);
+app.get('/Home', home.loadHome);
 
 //Profile Page
 app.get('/Profile', profile.loadProfile);

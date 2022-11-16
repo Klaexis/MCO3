@@ -8,6 +8,7 @@ const Art = require('./Models/Art');
 async function run(){
     try{
         const creation_of_adam = await Art.create({
+            artID: "art1",
             artName: "Creation of Adam",
             artistName: "Michelangelo di Lodovico Buonarroti Simoni",
             artImage: "creation_of_adam.jpg",
@@ -17,6 +18,7 @@ async function run(){
         console.log('created ' + creation_of_adam);
         
         const last_supper = await Art.create({
+            artID: "art2",
             artName: "Last Supper",
             artistName: "Leonardo da Vinci",
             artImage: "last_supper.jpg",
@@ -26,6 +28,7 @@ async function run(){
         console.log('created ' + last_supper);
 
         const mona_lisa = await Art.create({
+            artID: "art3",
             artName: "Mona Lisa",
             artistName: "Leonardo da Vinci",
             artImage: "mona_lisa.jpg",
@@ -35,6 +38,7 @@ async function run(){
         console.log('created ' + mona_lisa);
 
         const scream = await Art.create({
+            artID: "art4",
             artName: "Scream",
             artistName: "Edvard Munch",
             artImage: "scream.jpg",
@@ -44,6 +48,7 @@ async function run(){
         console.log('created ' + scream);
 
         const starry_night = await Art.create({
+            artID: "art5",
             artName: "Starry Night",
             artistName: "Vincent van Gogh",
             artImage: "starry_night.jpg",
@@ -53,6 +58,7 @@ async function run(){
         console.log('created ' + starry_night);
 
         const mountain_retreat = await Art.create({
+            artID: "art6",
             artName: "Mountain Retreat",
             artistName: "Bob Ross",
             artImage: "mountain_retreat.jpg",

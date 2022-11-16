@@ -11,73 +11,7 @@
         <title>Art Fair</title>
     </head>
     <body id="body-start" style="background: grey;">
-        <!-- header -->   
-        <div class="container-fluid">
-            <div class="row align-items-center p-2 b25 text-light">
-                <div class="col-md-3  d-none d-md-block h5 text-center"> Welcome to the Art Gallery</div>
-            </div>
-
-            <div class="row b1 align-items-center p-1  text-light">
-                <div class="col-6 col-md-2 ">
-                    <a href="#" class="link ml-1"><img src="../public/Images/Menu IMG/art_icon.jpg" alt="" loading="lazy" width="70" height="40"></a>
-                </div>
-                <div class="col-md-8  d-none d-md-block ">
-                    <form class="form-inline float-right mr-3">
-                        <input  class="form-control mr-sm-2 bg-dark border-dark text-danger btn-outline-dark" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn b1  btn-outline-dark my-2 my-sm-0  text-white" type="submit">Search</button>
-                    </form>
-                </div>
-                <div class="col-6 col-md-2 pr-3 ">
-                    <div class="dropdown float-right ">
-                        <button class="btn b1 text-white dropdown-toggle  btn-outline-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            My Account
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right " aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="/Profile">My Profile</a>
-                            <a class="dropdown-item" href="/Profile">Profile Settings</a>
-                            <a class="dropdown-item" href="/Cart">My Cart</a>
-                            <a class="dropdown-item" href="#">Logout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 p-0">
-                    <nav class="navbar navbar-expand-xl navbar-dark b25">
-
-                        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="outline: none; border: none;">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                            <ul class="navbar-nav mx-auto  ">
-                                <li class="nav-item dropdown text-center mx-0 mx-lg-3">
-                                    <a class="nav-link dropdown-toggle text-light" href="#" id="dropdownHome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Home
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownHome">
-                                        <a class="dropdown-item" href="#newArt">New Art</a>
-                                        <a class="dropdown-item" href="#artist">Artists</a>
-                                        <a class="dropdown-item" href="#event">Events/Exhibits</a>
-                                    </div>
-                                </li>
-
-                                <li class="nav-item dropdown text-center mx-0 mx-lg-3">
-                                    <a class="nav-link dropdown-toggle text-light" href="#" id="dropdownAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        About
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownAbout">
-                                        <a class="dropdown-item" href="#">About Company</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>     
-            </div> 
-        </div>
-        <!-- header -->
+    <%- include("header") -%>
         
         <!-- content start -->
         <div id="carouselMain" class="carousel slide carousel-fade" data-ride="carousel">
@@ -119,51 +53,34 @@
                 </ol>
                 
                 <div class="carousel-inner" style="border:5px solid black">
-                    <div class="carousel-item active" data-interval="5000">
-                        <!--  <a href="www.google.com" class="aBord-none"> </a> --> 
-                        <!-- When image click result on search -->
-                        
-                        <img src="../public/Images/Art/mountain_retreat.jpg" class="d-block vw-100" alt="Mountain Retreat"  height="500">
-                        
-                        <div class="carousel-caption d-none d-md-block">
-                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Mountain Retreat</h4>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item" data-interval="5000">
-                        <img src="../public/Images/Art/mona_lisa.jpg" class="d-block vw-100" alt="Mona Lisa"  height="500">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Mona Lisa</h4>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item" data-interval="5000">
-                        <img src="../public/Images/Art/last_supper.jpg" class="d-block vw-100" alt="Last Supper" height="500">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">The Last Supper</h4>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item" data-interval="5000">
-                        <img src="../public/Images/Art/starry_night.jpg" class="d-block vw-100" alt="The Starry Night"  height="500">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">The Starry Night</h4>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item" data-interval="5000">
-                        <img src="../public/Images/Art/scream.jpg" class="d-block vw-100" alt="Scream Painting"  height="500">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">The Scream</h4>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item" data-interval="5000">
-                        <img src="../public/Images/Art/creation_of_adam.jpg" class="d-block vw-100" alt="The Creation Of Adam"  height="500">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">The Creation of Adam</h4>
-                        </div>
-                    </div>                
+                    <% homeArt.forEach(function (homeArt) 
+                    {
+                        if(homeArt.artID == "art1")
+                        { %>
+                            <div class="carousel-item active" data-interval="5000">
+                                <!--  <a href="www.google.com" class="aBord-none"> </a> --> 
+                                <!-- When image click result on search -->
+
+                                <img src="public/Images/Art/<%=homeArt.artImage%>" class="d-block vw-100" alt="<%=homeArt.artName %>"  height="500">
+
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important"><%=homeArt.artName %></h4>
+                                </div>
+                            </div>
+                        <%
+                        }
+                        else if(homeArt.artID != "art1")
+                        { %>
+                            <div class="carousel-item" data-interval="5000">
+                                <img src="public/Images/Art/<%=homeArt.artImage%>" class="d-block vw-100" alt="<%=homeArt.artName %>"  height="500">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important"><%=homeArt.artName %></h4>
+                                </div>
+                            </div>
+                        <%
+                        }
+                    });
+                    %>
                 </div>
                 
                 <!-- Left and right controls -->
@@ -197,40 +114,30 @@
                         </ol>
                         
                         <div class="carousel-inner" style="border:5px solid yellow">
-                            <div class="carousel-item active" data-interval="5000">
-                                <img src="../public/Images/Artist/BOB_ROSS.jpg" class="d-block vw-100" alt="Bob Ross"  height="550">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Bob Ross</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="carousel-item" data-interval="5000">
-                                <img src="../public/Images/Artist/Leonardo.jpg" class="d-block vw-100" alt="Leonardo Da Vinci"  height="550">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Leonardo Da Vinci</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="carousel-item" data-interval="5000">
-                                <img src="../public/Images/Artist/vincent.jpg" class="d-block vw-100" alt="Vincent Van Gogh"  height="550">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Vincent Van Gogh</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="carousel-item" data-interval="5000">
-                                <img src="../public/Images/Artist/edvard.jpg" class="d-block vw-100" alt="Edvard Munch"  height="550">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Edvard Munch</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="carousel-item" data-interval="5000">
-                                <img src="../public/Images/Artist/michel.jpg" class="d-block vw-100" alt="Michelangelo"  height="550">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important">Michelangelo</h4>
-                                </div>
-                            </div>
+                            <% homeArtist.forEach(function (homeArtist) 
+                            {
+                                if(homeArtist.artistID == "artist1")
+                                { %>
+                                    <div class="carousel-item active" data-interval="5000">
+                                        <img src="/public/Images/Artist/<%=homeArtist.artistImage%>" class="d-block vw-100" alt="<%=homeArtist.artistName%>"  height="550">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important"><%=homeArtist.artistName%></h4>
+                                        </div>
+                                    </div>
+                                <%
+                                }
+                                else if(homeArtist.artistID != "artist1")
+                                { %>
+                                    <div class="carousel-item" data-interval="5000">
+                                        <img src="/public/Images/Artist/<%=homeArtist.artistImage%>" class="d-block vw-100" alt="<%=homeArtist.artistName%>"  height="550">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h4 class="mx-auto text-warning text-uppercase w-75 p-2 b25" style="border:5px solid #ffc107 !important"><%=homeArtist.artistName%></h4>
+                                        </div>
+                                    </div>
+                                <%
+                                }
+                            });
+                            %>   
                         </div>
                         <!-- Left and right controls -->
                         <a class="carousel-control-prev" href="#carousel-artist" role="button" data-slide="prev">

@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.set('views', 'view'); 
 
 //The path for static files inside the public folders that consist of the CSS, JS and Images
-app.use('/public', express.static((process.env.PWD || __dirname) + '/public'));
+app.use('/public', express.static((__dirname) + '/public'));
 
 //Start the server
 var port = process.env.PORT || 3000;

@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
 const artSchema = new mongoose.Schema({
+    artID: {
+        type: String, required: true, immutable: true
+    },
     artName: {
         type: String, required: true, immutable: true
     },

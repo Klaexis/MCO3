@@ -5,9 +5,8 @@ const Home = {
     loadHome: async function(req, res){
         //Session Handling Soon
         
-        const homeArt = await Art.find();   
-        const homeArtist = await Artist.find(); 
-            
+        const homeArt = await Art.find({});
+        const homeArtist = await Artist.find({});
         res.render('Home', {homeArt, homeArtist});
     }
 };

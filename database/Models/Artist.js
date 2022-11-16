@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
 const artistSchema = new mongoose.Schema({
+    artistID: {
+        type: String, required: true, immutable: true
+    },
     artistName: {
         type: String, required: true, immutable: true
     },
