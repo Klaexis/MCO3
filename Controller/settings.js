@@ -1,13 +1,13 @@
 const User = require('../Database/Models/User');
 
-const Profile = {
-    loadProfile: async function(req, res){
+const Settings = {
+    loadSettings: async function(req, res){
         //Session Handling Soon
         
         const userDetails = await User.find({});   
             
-        res.render('Profile', {userDetails});
+        res.render('Profile_Settings', {userDetails});
     }
 };
 
-module.exports = Profile;
+module.exports = Settings;

@@ -24,6 +24,9 @@ const userSchema = new mongoose.Schema({
     },
     userLocation: {
         type: String, required: true, immutable: true
+    },
+    aboutMe: {
+        type: String
     }
 });
 

@@ -15,7 +15,12 @@ async function run(){
             userImage: "squirtle.jpg",
             userGender: "Male",
             userEmail: "aleck@email.com",
-            userLocation: "Bermuda Triangle"
+            userLocation: "Bermuda Triangle",
+            aboutMe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore \n\
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex \n\
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat \n\
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim \n\
+            id est laborum."
         });
         await user1.save();
         console.log('created ' + user1);
@@ -28,7 +33,8 @@ async function run(){
             userImage: "squirtle.jpg",
             userGender: "Male",
             userEmail: "jonathan@email.com",
-            userLocation: "Bermuda Triangle"
+            userLocation: "Bermuda Triangle",
+            aboutMe: ""
         });
         await user2.save();
         console.log('created ' + user2);
@@ -41,7 +47,8 @@ async function run(){
             userImage: "squirtle.jpg",
             userGender: "Male",
             userEmail: "matteo@email.com",
-            userLocation: "Bermuda Triangle"
+            userLocation: "Bermuda Triangle",
+            aboutMe: "Hi I am Matteo"
         });
         await user3.save();
         console.log('created ' + user3);
