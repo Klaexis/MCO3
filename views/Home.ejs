@@ -35,7 +35,7 @@
             <p class="text-center  text-dark pb-5 pt-3 m-0 h6 d-md-none font-weight-bolder" >Buy Art Online</p>
             <h3 class="text-center  text-dark  py-4 m-0 d-none d-md-block font-weight-bolder">Buy Art Online</h3>
         </div>
-        <!-- slider end -->
+        <!-- slider end -->       
         <!-- new art start -->
         <div class="container" id="newArt">
             <br />
@@ -44,12 +44,22 @@
             <div id="carousel-newArt" class="carousel slide carousel-fade" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
-                    <li data-target="#carousel-newArt" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-newArt" data-slide-to="1"></li>
-                    <li data-target="#carousel-newArt" data-slide-to="2"></li>
-                    <li data-target="#carousel-newArt" data-slide-to="3"></li> 
-                    <li data-target="#carousel-newArt" data-slide-to="4"></li>
-                    <li data-target="#carousel-newArt" data-slide-to="5"></li>
+                    <% let i = 0;
+                    homeArt.forEach(function (homeArt) 
+                    {
+                        if(i = 0)
+                        { %>
+                            <li data-target="#carousel-newArt" data-slide-to="<%=i%>" class="active"></li>
+                        <%
+                        }
+                        else 
+                        { %>
+                            <li data-target="#carousel-newArt" data-slide-to="<%=i%>"></li>
+                        <%
+                        }
+                        i++;
+                    });
+                    %>
                 </ol>
                 
                 <div class="carousel-inner" style="border:5px solid black">
@@ -106,11 +116,22 @@
                     <div id="carousel-artist" class="carousel slide carousel-fade" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
-                            <li data-target="#carousel-artist" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-artist" data-slide-to="1"></li>
-                            <li data-target="#carousel-artist" data-slide-to="2"></li>
-                            <li data-target="#carousel-artist" data-slide-to="3"></li> 
-                            <li data-target="#carousel-artist" data-slide-to="4"></li>
+                            <% let j = 0;
+                            homeArtist.forEach(function (homeArtist) 
+                            {
+                                if(j = 0)
+                                { %>
+                                    <li data-target="#carousel-artist" data-slide-to="<%=j%>" class="active"></li>
+                                <%
+                                }
+                                else 
+                                { %>
+                                    <li data-target="#carousel-artist" data-slide-to="<%=j%>"></li>
+                                <%
+                                }
+                                j++;
+                            });
+                            %>
                         </ol>
                         
                         <div class="carousel-inner" style="border:5px solid yellow">
@@ -162,10 +183,10 @@
             <div id="carousel-event" class="carousel slide carousel-fade" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
-                    <li data-target="#carousel-newArt" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-newArt" data-slide-to="1"></li>
-                    <li data-target="#carousel-newArt" data-slide-to="2"></li>
-                    <li data-target="#carousel-newArt" data-slide-to="3"></li> 
+                    <li data-target="#carousel-event" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-event" data-slide-to="1"></li>
+                    <li data-target="#carousel-event" data-slide-to="2"></li>
+                    <li data-target="#carousel-event" data-slide-to="3"></li> 
                 </ol>
                 
                 <div class="carousel-inner" style="border:5px solid black">
@@ -224,16 +245,5 @@
         <!-- event end -->
         <br/>
             
-        <!-- footer -->
-        <!-- scroll go top start -->
-        <a id="myBtn" class="gotopbtn" href="#body-start"><img src="../public/Images/Menu IMG/up.jpg" width="60" height="60" loading="lazy"></a>
-        <!-- scroll end --> 
-    </body>
-    
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="../public/Javascript/HomeJS.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <%- include("footer") -%>
 </html>
