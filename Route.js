@@ -23,6 +23,7 @@ app.get('/Profile', profile.loadProfile);
 
 //Profile Settings Page
 app.get('/Settings', settings.loadSettings);
+app.post('/update', express.urlencoded({ extended: true }), settings.updateCredentials);
 
 //Cart Page
 app.get('/Cart', cart.loadCart);
