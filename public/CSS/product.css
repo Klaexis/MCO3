@@ -1,0 +1,31 @@
+/* PRODUCT */
+.product-container {
+	width: 418px;
+	background: white;
+	border: 1px solid rgb(214, 214, 214);
+	margin: 10px auto;
+}
+.product-img-container {
+    position: relative;
+    width: 416px;
+    float: left;
+	background-color: red;
+}
+.product-img {
+    width: 100%;
+}
+.product-desc {
+	margin: 10px;
+}
+.product-name {
+	font-weight: bold;
+}
+.product-artist {
+	font-size: 75%;
+}
+.product-cost {
+    color: grey;
+}
+.btn-danger {
+	width: 100%;
+}
