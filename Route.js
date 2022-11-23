@@ -6,6 +6,7 @@ const main = require('./Controller/main.js');
 const home = require('./Controller/home.js');
 const profile = require('./Controller/profile.js');
 const cart = require('./Controller/cart.js');
+const product = require('./Controller/product.js')
 const settings = require('./Controller/settings.js');
 
 //Login Page
@@ -26,6 +27,11 @@ app.get('/Settings', settings.loadSettings);
 app.post('/update', express.urlencoded({ extended: true }), settings.updateCredentials);
 
 //Cart Page
-app.get('/Cart', cart.loadCart);
+app.get('/cart', cart.loadCart);
+app.get('/removeArt/:artName', cart.removeItem);
+
+//Product Page
+app.get('/Product', product.loadProduct);
+app.get('/addtocart/:artName', cart.addtocart);
 
 module.exports = app;
