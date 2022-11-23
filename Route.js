@@ -6,7 +6,7 @@ const main = require('./Controller/main.js');
 const home = require('./Controller/home.js');
 const profile = require('./Controller/profile.js');
 const cart = require('./Controller/cart.js');
-const product = require('./Controller/product.js')
+const product = require('./Controller/product.js');
 const settings = require('./Controller/settings.js');
 
 //Login Page
@@ -17,7 +17,6 @@ app.get('/Register', main.loadRegister);
 
 //Main/Home Page
 app.post('/Home', home.loadHome);
-app.get('/Home', home.loadHome);
 
 //Profile Page
 app.get('/Profile', profile.loadProfile);
