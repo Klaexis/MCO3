@@ -1,18 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><!-- Required meta tags -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../public/CSS/Home_CSS.css" />
+    <title>Shopping Cart</title>
+</head>
+<body>
 <%- include("header") -%>
 <div class="container">
     <table>
-        <% product.forEach(function (product) { %>
+        <% artDetails.forEach(function (artDetails) { %>
             <tr>
                 <div class="product-container">
                     <div class="product-img-container">
-                        <img src="/public/Images/Art/<%= product.artImage %>" alt="<%= product.artImage %>" class="product-img" />
+                        <img src="/public/Images/Art/<%= artDetails.artImage %>" alt="<%= artDetails.artImage %>" class="product-img" />
                     </div>
                     <div class="product-desc">
-                        <div class="product-name"><%= product.artName %></div>
-                        <div class="product-artist"><%= product.artistName %></div>
-                        <div class="product-cost">₱<%= product.cost %></div>
+                        <div class="product-name"><%= artDetails.artName %></div>
+                        <div class="product-artist"><%= artDetails.artistName %></div>
+                        <div class="product-cost">₱<%= artDetails.cost %></div>
                     </div>
-                    <a href="add/<%= product.id %>" class="btn btn-sm btn-danger">add to cart</a>
+                    <% let url; %>
+                    <% let btn; %>
+                    <% cart.forEach(function (cart) { %>
+                        <% for (let i = 0; i < cart.artNames.length; i++) { %>
+                            <% if (cart.artNames[i] != artDetails.artName) { %>
+                                <% url = "addtocart/" %>
+                                <% btn = "add to cart" %>
+                            <% } %>
+                            <% if (cart.artNames[i] == artDetails.artName) { %>
+                                <% url = "/removeArt/" %>
+                                <% btn = "Delete" %>
+                                <% console.log(artDetails.artName) %>
+                                <%break;%>
+                            <% } %>
+                        <% } %>
+                    <% }); %>
+                    <a href="<%= url %><%= artDetails.artName %>" class="btn btn-sm btn-danger"><%= btn %></a>
                 </div>
             </tr>
         <% }); %>
