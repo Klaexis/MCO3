@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
         <link rel="stylesheet" type="text/css" media="all" href="../public/CSS/login_register_CSS.css">
-        <title>ATRIUM</title>
+        <title>Create an Account: ATRIUM</title>
     </head>
 
     <header class="login-header">
@@ -15,22 +21,45 @@
 
     <body>
         <h1>Welcome to ATRIUM</h1>
-        <h2>Account Creation</h2><br><br><br><br><br> 
+        <h2>Be the New Kid on the Block</h2><br><br><br><br><br> 
 
         <div class="login-proper">
-            <div class="form">
-                <form action="/" method="GET">
-                    <br><br>
-                    <label for="username">First Name</label><br>
-                    <input type="text" id="fname" name="firstname"><br><br>
-                    <label for="password">Last Name</label><br>
-                    <input type="text" id="lname" name="lastname"><br><br>
-                    <label for="username">Email Address</label><br>
-                    <input type="text" id="email" name="email"><br><br>
-                    <label for="username">Username</label><br>
-                    <input type="text" id="username" name="username"><br><br>
-                    <input class="button" type="submit" value="Create">
-                    <br><br>
+            <div>
+                <form class="form-type" action="/createaccount" method="post">
+                    <div class="mb-3">
+                        <label for="emailInput" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="emailInpu" aria-describedby="emailHelp" placeholder="Enter your email | claude.monet@gmail.com" name="email" required>
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="firstNameInput" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="firstNameInput" placeholder="Enter your first name | Virgil" name="firstName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastNameInput" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastNameInput" placeholder="Enter your last name | Abloh" name="lastName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="usernameInput" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="usernameInput" placeholder="Enter your username | c.dior44" name="userName" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="passwordInput" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="passwordInput" placeholder="Enter your password" name="password" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="genderInput" class="form-label">Gender</label>
+                      <input type="text" class="form-control" id="genderInput" placeholder="Enter your Gender | All Genders are Welcome" name="gender" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="locationInput" class="form-label">Location</label>
+                      <input type="text" class="form-control" id="locationInput" placeholder="Enter your location | Vaudeville" name="location" required>
+                    </div>
+                    <div>
+                        <label for="myfile">What's your profile picture?</label>
+                        <input type="file" id="myfile" name="profilePic" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>

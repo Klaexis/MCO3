@@ -10,11 +10,14 @@ const settings = require('./Controller/settings.js');
 
 //Login Page
 app.get('/', main.loadLogin);
+app.post('/verify',  main.userVerification);
 
 //Register Page
 app.get('/Register', main.loadRegister);
+app.post('/createaccount', main.createUser);
 
 //Main/Home Page
+app.get('/Home', main.loadHome);
 app.post('/Home', main.loadHome);
 
 //Profile Page

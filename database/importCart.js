@@ -34,6 +34,26 @@ async function run(){
         await user3_cart.save();
         console.log('created ' + user3_cart);
         
+        const user4_cart = await cart.create({
+            username: "pyrex23",
+            artNames: [
+                "Starry Night",
+                "Last Supper"
+            ]
+        });
+        await user4_cart.save();
+        console.log('created ' + user4_cart);
+        
+        const user5_cart = await cart.create({
+            username: "rafprada27",
+            artNames: [
+                "Scream",
+                "Mountain Retreat"
+            ]
+        });
+        await user5_cart.save();
+        console.log('created ' + user5_cart);
+        
     } catch(e) {
         console.log(e.message);
     }

@@ -52,6 +52,34 @@ async function run(){
         });
         await user3.save();
         console.log('created ' + user3);
+
+        const user4 = await User.create({
+            username: "pyrex23",
+            userFirstName: "Virgil",
+            userLastName: "Abloh",
+            userPassword: "12345",
+            userImage: "pyrex.jpg",
+            userGender: "Male",
+            userEmail: "ablog@email.com",
+            userLocation: "Bermuda Triangle",
+            aboutMe: "VIRGIL PYREX DON C SNAPBACK"
+        });
+        await user4.save();
+        console.log('created ' + user4);
+
+        const user5 = await User.create({
+            username: "rafprada27",
+            userFirstName: "Raf",
+            userLastName: "Simons",
+            userPassword: "12345",
+            userImage: "raf.jpg",
+            userGender: "Male",
+            userEmail: "rafsimons@email.com",
+            userLocation: "Bermuda Triangle",
+            aboutMe: "All raf is archive now lmao"
+        });
+        await user5.save();
+        console.log('created ' + user5);
         
     }catch(e){
         console.log(e.message);
