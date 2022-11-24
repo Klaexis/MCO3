@@ -3,7 +3,6 @@ const app = express();
 
 //Controller Javascript Files
 const main = require('./Controller/main.js');
-const home = require('./Controller/home.js');
 const profile = require('./Controller/profile.js');
 const cart = require('./Controller/cart.js');
 const product = require('./Controller/product.js');
@@ -16,14 +15,14 @@ app.get('/', main.loadLogin);
 app.get('/Register', main.loadRegister);
 
 //Main/Home Page
-app.post('/Home', home.loadHome);
+app.post('/Home', main.loadHome);
 
 //Profile Page
 app.get('/Profile', profile.loadProfile);
 
 //Profile Settings Page
 app.get('/Settings', settings.loadSettings);
-app.post('/update', express.urlencoded({ extended: true }), settings.updateCredentials);
+app.post('/update', settings.updateCredentials);
 
 //Cart Page
 app.get('/cart', cart.loadCart);
