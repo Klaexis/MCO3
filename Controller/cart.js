@@ -3,7 +3,7 @@ const Cart = require('../Database/Models/cart.js');
 const User = require('../Database/Models/User.js');
 const Art = require('../Database/Models/Art.js');
 
-let user = 'lm021804';
+let user = 'lj021803';
 
 const cart = {
     loadCart: async function(req, res) {
@@ -33,12 +33,12 @@ const cart = {
             if (err) {
                 console.log(err);
             } else {
-                res.redirect('/product');
+                res.redirect('/cart');
             }
         });
     }),
 
-    addtocart: ('/removeArt/:artName', (req, res) => {
+    addtocart: ('/addtocart/:artName', (req, res) => {
         
         const artName = req.params.artName;
 

@@ -1,7 +1,7 @@
 const art = require('../Database/Models/Art.js');
 const cart = require('../Database/Models/cart.js');
 
-let user = 'lm021804';
+let user = 'lj021803';
 
 const product = {
     loadProduct: async function(req, res) {
@@ -21,9 +21,7 @@ const product = {
                 });
             }
         });
-    }
+    },
 };
-
-
 
 module.exports = product;
