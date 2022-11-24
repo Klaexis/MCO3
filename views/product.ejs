@@ -25,23 +25,22 @@
                         <div class="product-artist"><%= artDetails.artistName %></div>
                         <div class="product-cost">₱<%= artDetails.cost %></div>
                     </div>
-                    <% let url; %>
-                    <% let btn; %>
                     <% cart.forEach(function (cart) { %>
-                        <% for (let i = 0; i < cart.artNames.length; i++) { %>
-                            <% if (cart.artNames[i] != artDetails.artName) { %>
-                                <% url = "addtocart/" %>
-                                <% btn = "add to cart" %>
-                            <% } %>
-                            <% if (cart.artNames[i] == artDetails.artName) { %>
-                                <% url = "/removeArt/" %>
-                                <% btn = "Delete" %>
-                                <% console.log(artDetails.artName) %>
-                                <%break;%>
+                        <% if (cart.artNames.length != 0) { %>
+                            <% for (let i = 0; i < cart.artNames.length; i++) { %>
+                                <% if (cart.artNames[i] == artDetails.artName) { %>
+                                    <a href="/addtocart/<%= artDetails.artName %>" class="btn btn-sm btn-secondary disabled" value="add to cart">add to cart</a>
+                                    <%break;%>
+                                <% } %>
+                                <% if (cart.artNames[i] != artDetails.artName && cart.artNames[i] == cart.artNames[cart.artNames.length - 1]) { %>
+                                    <a href="/addtocart/<%= artDetails.artName %>" class="btn btn-sm btn-danger">add to cart</a>
+                                <% } %>
                             <% } %>
                         <% } %>
+                        <% if (cart.artNames.length == 0) { %>
+                            <a href="/addtocart/<%= artDetails.artName %>" class="btn btn-sm btn-danger">add to cart</a>
+                        <% } %>
                     <% }); %>
-                    <a href="<%= url %><%= artDetails.artName %>" class="btn btn-sm btn-danger"><%= btn %></a>
                 </div>
             </tr>
         <% }); %>
