@@ -5,7 +5,7 @@ const cartSchema = new mongoose.Schema({
         type: String, required: true, immutable: true
     },
     artNames: {
-        type: Array, required: true, unique: true
+        type: Array, required: true
     }
 });
 
