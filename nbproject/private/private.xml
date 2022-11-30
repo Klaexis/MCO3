@@ -3,30 +3,31 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/importArtist.js</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/importArt.js</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Index.js</file>
-            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/importUser.js</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Controller/product.js</file>
-            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/Models/User.js</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Controller/profile.js</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/product.ejs</file>
+            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Controller/main.js</file>
+            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Route.js</file>
+            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/Profile_Settings.ejs</file>
+            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/Profile.ejs</file>
+            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/Models/Artist.js</file>
+            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/partials/header.ejs</file>
+            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/Models/Art.js</file>
+            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/importArtist.js</file>
+            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/importUser.js</file>
+            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/Models/User.js</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/cart.ejs</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Controller/settings.js</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Controller/cart.js</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/importCart.js</file>
-            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/footer.ejs</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/create%20page.ejs</file>
-            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Controller/main.js</file>
-            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/header.ejs</file>
+            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Controller/session.js</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/login%20page.ejs</file>
-            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Route.js</file>
-            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/Profile_Settings.ejs</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/Models/cart.js</file>
-            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/Profile.ejs</file>
             <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/Home.ejs</file>
-            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/Models/Artist.js</file>
-            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/Database/Models/Art.js</file>
+            <file>file:/C:/Users/User/Desktop/Aleck%20Lim%20DLSU%20Notes/Major%20Subjects/CCAPDEV/MP/MCO2/views/partials/footer.ejs</file>
         </group>
     </open-files>
 </project-private>

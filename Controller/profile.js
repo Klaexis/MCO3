@@ -2,11 +2,10 @@ const User = require('../Database/Models/User');
 
 const Profile = {
     loadProfile: async function(req, res){
-        //Session Handling Soon
-        
-        const userDetails = await User.find({});   
+        const username = req.session.username;
+        const userDetails = await User.findOne({username : username});   
             
-        res.render('Profile', {userDetails});
+        res.render('Profile', {userDetails, isSession: true});
     }
 };
 

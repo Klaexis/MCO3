@@ -7,32 +7,36 @@ const profile = require('./Controller/profile.js');
 const cart = require('./Controller/cart.js');
 const product = require('./Controller/product.js');
 const settings = require('./Controller/settings.js');
+const {checkAuth, isAuth} = require('./Controller/session.js');
 
 //Login Page
-app.get('/', main.loadLogin);
-app.post('/verify',  main.userVerification);
+app.get('/', checkAuth, main.loadLogin);
+app.post('/verify', main.userVerification);
+
+//Logout
+app.get('/Logout', isAuth, main.logoutUser);
 
 //Register Page
-app.get('/Register', main.loadRegister);
-app.post('/createaccount', main.createUser);
+app.get('/Register', checkAuth, main.loadRegister);
+app.post('/createaccount', checkAuth, main.createUser);
 
 //Main/Home Page
-app.get('/Home', main.loadHome);
-app.post('/Home', main.loadHome);
+app.get('/Home', isAuth, main.loadHome);
+app.post('/Home', isAuth, main.loadHome);
 
 //Profile Page
-app.get('/Profile', profile.loadProfile);
+app.get('/Profile', isAuth, profile.loadProfile);
 
 //Profile Settings Page
-app.get('/Settings', settings.loadSettings);
-app.post('/update', settings.updateCredentials);
+app.get('/Settings', isAuth, settings.loadSettings);
+app.post('/update', isAuth, settings.updateCredentials);
 
 //Cart Page
-app.get('/cart', cart.loadCart);
-app.get('/removeArt/:artName', cart.removeItem);
+app.get('/cart', isAuth, cart.loadCart);
+app.get('/removeArt/:artName', isAuth, cart.removeItem);
 
 //Product Page
-app.get('/Product', product.loadProduct);
-app.get('/addtocart/:artName', cart.addtocart);
+app.get('/Product', isAuth, product.loadProduct);
+app.get('/addtocart/:artName', isAuth, cart.addtocart);
 
 module.exports = app;

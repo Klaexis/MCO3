@@ -10,7 +10,7 @@ const product = {
         
         const artDetails = await art.find({});
 
-        cart.find({username: user}, function(err, rows) {
+        cart.find({username: req.session.username}, function(err, rows) {
             if (err) {
                 console.log(err);
             } else {
@@ -21,7 +21,7 @@ const product = {
                 });
             }
         });
-    },
+    }
 };
 
 module.exports = product;

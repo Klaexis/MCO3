@@ -11,6 +11,13 @@ const main = {
         res.render('create page');
     },
     
+    loadHome: async function(req, res){
+        const homeArt = await Art.find({});
+        const homeArtist = await Artist.find({});
+        
+        res.render('Home', {homeArt, homeArtist});
+    },
+    
     createUser: async function(req, res){
         var username = req.body.userName;
         var userFirstName = req.body.firstName;
@@ -21,41 +28,66 @@ const main = {
         var userEmail = req.body.email;
         var userLocation = req.body.location;
         
-        User.create({username: username, userFirstName: userFirstName, userLastName: userLastName, userPassword: userPassword,
+        var checkUsername = await User.findOne({username : username});
+        
+        if(checkUsername !== null){
+            req.flash('error_msg', "Username already exists");
+            res.redirect('/Register');
+        }
+        else {
+            User.create({username: username, userFirstName: userFirstName, userLastName: userLastName, userPassword: userPassword,
                     userImage: userImage, userGender: userGender, userEmail: userEmail, userLocation: userLocation, 
                     aboutMe: ""},
-            function(err){
-            if(err){
-                console.log("Register Failed");
-                res.redirect('/Register');
-            }
-            else{
-                console.log("Register Success");
-                res.redirect('/');
-            }
-        });
+                function(err){
+                if(err){
+                    console.log("Register Failed");
+                    res.redirect('/Register');
+                }
+                else{
+                    console.log("Register Success");
+                    res.redirect('/');
+                }
+            });
+        }   
     }, 
-    
-    loadHome: async function(req, res){
-        const homeArt = await Art.find({});
-        const homeArtist = await Artist.find({});
-        
-        res.render('Home', {homeArt, homeArtist});
-    },
     
     userVerification: async function(req, res){
         var getUserName = req.body.username;
         var getPassword = req.body.password;
-        
         var loginUser = await User.findOne({username: getUserName});
-
-        if(loginUser.userPassword === getPassword){
-            console.log("Login Successful");
-            res.redirect('/Home');
-        }
-        else{
-            console.log("Invalid Login");
-            res.redirect('/');
+        
+        User.findOne({username: getUserName}, 
+            function(err, user){
+                if(err){
+                    res.redirect('/');
+                }
+                else{
+                    if(user){
+                        if(loginUser.userPassword === getPassword){
+                            req.session.username = getUserName;
+                            console.log(req.session);
+                            console.log("Login Successful");
+                            res.redirect('/Home');
+                        }
+                        else{
+                            console.log("Invalid Login");
+                            res.redirect('/');
+                        }
+                    }
+                    else{
+                        console.log('Username not found');
+                        res.redirect('/');
+                    }
+                }
+            });
+    },
+    
+    logoutUser: function(req, res){
+        if(req.session){
+            req.session.destroy(()=>{
+                res.clearCookie('connect.sid');
+                res.redirect('/');
+            });
         }
     }
 };

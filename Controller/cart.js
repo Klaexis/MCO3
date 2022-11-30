@@ -3,8 +3,6 @@ const Cart = require('../Database/Models/cart.js');
 const User = require('../Database/Models/User.js');
 const Art = require('../Database/Models/Art.js');
 
-let user = 'lj021803';
-
 const cart = {
     loadCart: async function(req, res) {
 
@@ -12,7 +10,7 @@ const cart = {
 
         const artDetails = await Art.find({});
 
-        Cart.find({username: user} , function(err, rows) {
+        Cart.find({username: req.session.username} , function(err, rows) {
             if (err) {
                 console.log(err);
             } else {
@@ -29,7 +27,7 @@ const cart = {
 
         const artName = req.params.artName;
         
-        Cart.findOneAndUpdate({username : user } , {$pull: {"artNames": artName}}, function(err) {
+        Cart.findOneAndUpdate({username : req.session.username} , {$pull: {"artNames": artName}}, function(err) {
             if (err) {
                 console.log(err);
             } else {
@@ -42,7 +40,7 @@ const cart = {
         
         const artName = req.params.artName;
 
-        Cart.findOneAndUpdate({username: user}, {$push: {"artNames" : artName}}, function(err) {
+        Cart.findOneAndUpdate({username: req.session.username}, {$push: {"artNames" : artName}}, function(err) {
             if (err) {
                 console.log(err);
             } else {

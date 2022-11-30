@@ -3,16 +3,14 @@ const bcryptjs = require('bcryptjs');
 
 const Settings = {
     loadSettings: async function(req, res){
-        //Session Handling Soon
-        
-        const userDetails = await User.find({});   
+        const username = req.session.username;
+        const userDetails = await User.findOne({username : username});   
             
-        res.render('Profile_Settings', {userDetails});
+        res.render('Profile_Settings', {userDetails, isSession: true});
     },
     
     updateCredentials: async function(req, res){
-//        const user = await User.findOne({username : req.session.username}); for Session
-        let user = await User.findOne({username:'la021802'});
+        const user = await User.findOne({username : req.session.username}); //for Session
         
         var getFirstName = req.body.firstName;
         var getLastName = req.body.lastName;

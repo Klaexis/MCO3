@@ -9,16 +9,9 @@
     </head>
     
     <body id="body-start">
-        <%- include("header") -%>
-        
+        <%- include("./partials/header") -%>
         <!-- profile start -->
         <div class="containerProfile">
-<!--            Session Handling HERE-->
-            <% userDetails.forEach(function (userDetails)
-            {
-                if(userDetails.username == "la021802")
-                {
-            %>
             <div class="cover-photo">
                 <img src="/public/Images/Profile/<%=userDetails.userImage%>" class="profile-photo">
             </div>
@@ -47,14 +40,12 @@
                     </p>
                 </div>
             </div>
-            <% }
-            });%>
             
             <button type="button" class="profBtn" id="btn1" data-target="aboutMe">About Me</button>
             <button type="button" class="profBtn" id="btn2" data-target="credentials">Credentials</button>
         </div>
         <!-- profile end -->
-    <%- include("footer") -%>
+    <%- include("./partials/footer") -%>
     <script type="text/javascript" src="../public/Javascript/ProfileJS.js"></script>
     
 </html>
