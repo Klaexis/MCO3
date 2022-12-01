@@ -9,7 +9,20 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const MongoStore = require('connect-mongo');
 
-mongoose.connect("mongodb://localhost/ArtGallery");
+//For Localhost MongoDB
+//mongoose.connect("mongodb://localhost/ArtGallery");
+
+//For Cloud Mongo Atlas
+const mongoAtlasUri = "mongodb+srv://Aleck:Aleck12345@atrium.l9h6y8u.mongodb.net/ArtGallery";
+try {
+    // Connect to the MongoDB cluster
+        mongoose.connect(mongoAtlasUri, { useNewUrlParser: true, useUnifiedTopology: true },
+        () => console.log("Mongoose is connected")
+    );
+
+} catch (e) {
+    console.log("could not connect");
+}
 
 const app = new express();
 app.use(express.json());
@@ -31,7 +44,8 @@ app.listen(port, function(){
 //Sessions
 app.use(session({
     secret: "NeverGonnaGiveYouUp",
-    store: MongoStore.create({mongoUrl: "mongodb://localhost/ArtGallery"}),
+    //store: MongoStore.create({mongoUrl: "mongodb://localhost/ArtGallery"}), //Localhost
+    store: MongoStore.create({mongoUrl: "mongodb+srv://Aleck:Aleck12345@atrium.l9h6y8u.mongodb.net/ArtGallery"}), //For Atlas
     resave: false,
     saveUninitialized: true,
     cookies:  {secure: false, maxAge: 24 * 60 * 60 * 1000}

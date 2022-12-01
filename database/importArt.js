@@ -1,7 +1,11 @@
-
+// Only run once in CLI to prevent redundancy
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://localhost/ArtGallery");
+//For Localhost MongoDB
+//mongoose.connect("mongodb://localhost/ArtGallery");
+
+//For Cloud Mongo Atlas
+mongoose.connect("mongodb+srv://Aleck:Aleck12345@atrium.l9h6y8u.mongodb.net/ArtGallery"); //MongoDB Atlas get the URL and change password
 
 const Art = require('./Models/Art');
 
