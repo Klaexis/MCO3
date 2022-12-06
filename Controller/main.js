@@ -27,6 +27,10 @@ const main = {
         res.render('Home', {homeArt, homeArtist});
     },
     
+    loadAbout: async function(req, res){
+        res.render('About');
+    },
+    
     createUser: async function(req, res){
         var username = req.body.userName;
         var userFirstName = req.body.firstName;
