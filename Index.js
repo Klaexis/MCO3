@@ -45,7 +45,7 @@ app.listen(port, function(){
 app.use(session({
     secret: "NeverGonnaGiveYouUp",
     //store: MongoStore.create({mongoUrl: "mongodb://localhost/ArtGallery"}), //Localhost
-    store: MongoStore.create({mongoUrl: "mongodb+srv://apdev16:DOo226VSHThV4m6e@atrium.l9h6y8u.mongodb.net/ArtGallery"}), //For Atlas
+    store: MongoStore.create({mongoUrl: mongoAtlasUri}), //For Atlas
     resave: false,
     saveUninitialized: true,
     cookies:  {secure: false, maxAge: 24 * 60 * 60 * 1000}

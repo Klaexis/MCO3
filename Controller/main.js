@@ -2,6 +2,13 @@ const User = require('../Database/Models/User');
 const Art = require('../Database/Models/Art.js');
 const Artist = require('../Database/Models/Artist.js');
 
+const crypto = require("crypto");
+
+const algorithm  = 'aes-256-cbc';
+
+// 32 characters
+const key = "capdev-grp-16-atrium-art-gallery";
+
 const main = {
     loadLogin: function(req, res){
         res.render('login page');
@@ -35,8 +42,15 @@ const main = {
             res.redirect('/Register');
         }
         else {
-            User.create({username: username, userFirstName: userFirstName, userLastName: userLastName, userPassword: userPassword,
-                    userImage: userImage, userGender: userGender, userEmail: userEmail, userLocation: userLocation, 
+            const iv = crypto.randomBytes(16);
+
+            const cipher = crypto.createCipheriv(algorithm, key, iv);
+            let encryptedData = cipher.update(userPassword, "utf-8", "hex");
+            encryptedData += cipher.final("hex");
+
+            const base64data = Buffer.from(iv, 'binary').toString('base64');
+            User.create({username: username, userFirstName: userFirstName, userLastName: userLastName, userPassword: encryptedData, 
+                    userIV: base64data, userImage: userImage, userGender: userGender, userEmail: userEmail, userLocation: userLocation, 
                     aboutMe: ""},
                 function(err){
                 if(err){
@@ -63,7 +77,11 @@ const main = {
                 }
                 else{
                     if(user){
-                        if(loginUser.userPassword === getPassword){
+                        const originalData = Buffer.from(loginUser.userIV, 'base64');
+                        const decipher = crypto.createDecipheriv(algorithm, key, originalData);
+                        let decryptedData = decipher.update(loginUser.userPassword, "hex", "utf-8");
+                        decryptedData += decipher.final("utf8");
+                        if(decryptedData === getPassword){
                             req.session.username = getUserName;
                             console.log(req.session);
                             console.log("Login Successful");
