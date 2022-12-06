@@ -13,7 +13,6 @@
 
 ### Now, to run the server locally: <br>
 - It is advisable first to run **importArt.js(REQUIRED)**, **importArtist.js(REQUIRED)**, **importUser.js(OPTIONAL)**, **importCart(OPTIONAL)** to load the database and the server will be able to read (to run it go to command prompt/CLI inside where the import folders reside and do `node importArt.js` for example).  
-- For Mongo Atlas, go to mongoDB compass and import the JSON files inside Database -> JSON folder.
 - Afterwards, go to the main/root folder and click the DIR and go to command prompt and type in `node/nodemon Index.js` to be able to run the server. 
 - Next, type in your browser localhost:3000 to connect to the server and start registering(if you did not run importUser.js) to create an account and be able to log-in, or just directly login with the sample user created by importUser.js. Then you are directed to the homepage and you are now able to check out the different art, your profile and your cart.
 
