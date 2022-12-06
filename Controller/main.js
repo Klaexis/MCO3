@@ -2,12 +2,14 @@ const User = require('../Database/Models/User');
 const Art = require('../Database/Models/Art.js');
 const Artist = require('../Database/Models/Artist.js');
 
-const crypto = require("crypto");
+const crypto = require("../public/Javascript/crypto.js");
 
-const algorithm  = 'aes-256-cbc';
+// const crypto = require("crypto");
 
-// 32 characters
-const key = "capdev-grp-16-atrium-art-gallery";
+// const algorithm  = 'aes-256-cbc';
+
+// // 32 characters
+// const key = "capdev-grp-16-atrium-art-gallery";
 
 const main = {
     loadLogin: function(req, res){
@@ -23,10 +25,6 @@ const main = {
         const homeArtist = await Artist.find({});
         
         res.render('Home', {homeArt, homeArtist});
-    },
-    
-    loadAbout: async function(req, res){
-        res.render('About');
     },
     
     createUser: async function(req, res){
@@ -46,15 +44,19 @@ const main = {
             res.redirect('/Register');
         }
         else {
-            const iv = crypto.randomBytes(16);
+            // const iv = crypto.randomBytes(16);
 
-            const cipher = crypto.createCipheriv(algorithm, key, iv);
-            let encryptedData = cipher.update(userPassword, "utf-8", "hex");
-            encryptedData += cipher.final("hex");
+            // const cipher = crypto.createCipheriv(algorithm, key, iv);
+            // let encryptedData = cipher.update(userPassword, "utf-8", "hex");
+            // encryptedData += cipher.final("hex");
 
-            const base64data = Buffer.from(iv, 'binary').toString('base64');
-            User.create({username: username, userFirstName: userFirstName, userLastName: userLastName, userPassword: encryptedData, 
-                    userIV: base64data, userImage: userImage, userGender: userGender, userEmail: userEmail, userLocation: userLocation, 
+            const arr = crypto.encryption(userPassword);
+            var password = arr[0];
+            var iv = arr[1];
+
+            // const base64data = Buffer.from(iv, 'binary').toString('base64');
+            User.create({username: username, userFirstName: userFirstName, userLastName: userLastName, userPassword: password, 
+                    userIV: iv, userImage: userImage, userGender: userGender, userEmail: userEmail, userLocation: userLocation, 
                     aboutMe: ""},
                 function(err){
                 if(err){
@@ -77,16 +79,12 @@ const main = {
         User.findOne({username: getUserName}, 
             function(err, user){
                 if(err){
+                    console.log(err);
                     res.redirect('/');
                 }
                 else{
                     if(user){
-                        const originalData = Buffer.from(loginUser.userIV, 'base64');
-                        const decipher = crypto.createDecipheriv(algorithm, key, originalData);
-                        let decryptedData = decipher.update(loginUser.userPassword, "hex", "utf-8");
-                        decryptedData += decipher.final("utf8");
-                        
-                        if(decryptedData === getPassword){
+                        if(crypto.decryption(loginUser.userIV, loginUser.userPassword) === getPassword){
                             req.session.username = getUserName;
                             console.log(req.session);
                             console.log("Login Successful");
