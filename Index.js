@@ -13,7 +13,7 @@ const MongoStore = require('connect-mongo');
 //mongoose.connect("mongodb://localhost/ArtGallery");
 
 //For Cloud Mongo Atlas
-const mongoAtlasUri = "mongodb+srv://apdev16:DOo226VSHThV4m6e@atrium.l9h6y8u.mongodb.net/ArtGallery";
+const mongoAtlasUri = process.env.MONGODB_URI;
 try {
     // Connect to the MongoDB cluster
         mongoose.connect(mongoAtlasUri, { useNewUrlParser: true, useUnifiedTopology: true },
