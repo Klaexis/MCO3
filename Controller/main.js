@@ -4,13 +4,6 @@ const Artist = require('../Database/Models/Artist.js');
 
 const crypto = require("../public/Javascript/crypto.js");
 
-// const crypto = require("crypto");
-
-// const algorithm  = 'aes-256-cbc';
-
-// // 32 characters
-// const key = "capdev-grp-16-atrium-art-gallery";
-
 const main = {
     loadLogin: function(req, res){
         res.render('login page');
@@ -48,17 +41,10 @@ const main = {
             res.redirect('/Register');
         }
         else {
-            // const iv = crypto.randomBytes(16);
-
-            // const cipher = crypto.createCipheriv(algorithm, key, iv);
-            // let encryptedData = cipher.update(userPassword, "utf-8", "hex");
-            // encryptedData += cipher.final("hex");
-
             const arr = crypto.encryption(userPassword);
             var password = arr[0];
             var iv = arr[1];
 
-            // const base64data = Buffer.from(iv, 'binary').toString('base64');
             User.create({username: username, userFirstName: userFirstName, userLastName: userLastName, userPassword: password, 
                     userIV: iv, userImage: userImage, userGender: userGender, userEmail: userEmail, userLocation: userLocation, 
                     aboutMe: ""},
