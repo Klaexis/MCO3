@@ -13,6 +13,9 @@ const userSchema = new mongoose.Schema({
     userPassword: {
         type: String, required: true
     },
+    userIV: {
+        type: String, required: true
+    },
     userImage: {
         type: String
     },
