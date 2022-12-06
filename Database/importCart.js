@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 //mongoose.connect("mongodb://localhost/ArtGallery");
 
 //For Cloud Mongo Atlas
-mongoose.connect("mongodb+srv://Aleck:Aleck12345@atrium.l9h6y8u.mongodb.net/ArtGallery"); //MongoDB Atlas get the URL and change password
+mongoose.connect(process.env.MONGODB_URI); //MongoDB Atlas
 
 const cart = require('./Models/cart');
 

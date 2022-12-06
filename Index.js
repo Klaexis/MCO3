@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-require('dotenv').config();
+require('dotenv').config(); //For .env variables
 
+//Routing file
 const routes = require('./Route.js');
 
 //For Session
@@ -51,7 +52,7 @@ app.use(session({
     cookies:  {secure: false, maxAge: 24 * 60 * 60 * 1000}
 }));
 
-// Flash
+Flash
 app.use(flash());
 app.use((req, res, next) => {
 	res.locals.success_msg = req.flash('success_msg');

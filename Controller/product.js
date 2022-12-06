@@ -1,15 +1,12 @@
 const art = require('../Database/Models/Art.js');
 const cart = require('../Database/Models/cart.js');
 
-let user = 'lj021803';
-
 const product = {
+    //Render product list page
     loadProduct: async function(req, res) {
-
-        //Session Handling Soon
+        const artDetails = await art.find({});//Create art object
         
-        const artDetails = await art.find({});
-
+        //Find cart of user in session
         cart.find({username: req.session.username}, function(err, rows) {
             if (err) {
                 console.log(err);
