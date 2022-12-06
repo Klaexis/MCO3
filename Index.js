@@ -43,7 +43,7 @@ app.listen(port, function(){
 
 //Sessions
 app.use(session({
-    secret: "NeverGonnaGiveYouUp",
+    secret: process.env.SECRET,
     //store: MongoStore.create({mongoUrl: "mongodb://localhost/ArtGallery"}), //Localhost
     store: MongoStore.create({mongoUrl: mongoAtlasUri}), //For Atlas
     resave: false,
