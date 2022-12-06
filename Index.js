@@ -13,16 +13,17 @@ const MongoStore = require('connect-mongo');
 //mongoose.connect("mongodb://localhost/ArtGallery");
 
 //For Cloud Mongo Atlas
-const mongoAtlasUri = process.env.MONGODB_URI;
-try {
-    // Connect to the MongoDB cluster
-        mongoose.connect(mongoAtlasUri, { useNewUrlParser: true, useUnifiedTopology: true },
-        () => console.log("Mongoose is connected")
-    );
-
-} catch (e) {
-    console.log("could not connect");
-}
+mongoose.connect(process.env.MONGODB_URI);
+//const mongoAtlasUri = process.env.MONGODB_URI;
+//try {
+//    // Connect to the MongoDB cluster
+//        mongoose.connect(mongoAtlasUri, { useNewUrlParser: true, useUnifiedTopology: true },
+//        () => console.log("Mongoose is connected")
+//    );
+//
+//} catch (e) {
+//    console.log("could not connect");
+//}
 
 const app = new express();
 app.use(express.json());
@@ -45,7 +46,8 @@ app.listen(port, function(){
 app.use(session({
     secret: "NeverGonnaGiveYouUp",
     //store: MongoStore.create({mongoUrl: "mongodb://localhost/ArtGallery"}), //Localhost
-    store: MongoStore.create({mongoUrl: mongoAtlasUri}), //For Atlas
+//    store: MongoStore.create({mongoUrl: mongoAtlasUri}), //For Atlas
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
     resave: false,
     saveUninitialized: true,
     cookies:  {secure: false, maxAge: 24 * 60 * 60 * 1000}
