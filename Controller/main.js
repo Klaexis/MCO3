@@ -25,6 +25,10 @@ const main = {
         res.render('Home', {homeArt, homeArtist});
     },
     
+    loadAbout: async function(req, res){
+        res.render('About');
+    },
+    
     createUser: async function(req, res){
         var username = req.body.userName;
         var userFirstName = req.body.firstName;
@@ -81,6 +85,7 @@ const main = {
                         const decipher = crypto.createDecipheriv(algorithm, key, originalData);
                         let decryptedData = decipher.update(loginUser.userPassword, "hex", "utf-8");
                         decryptedData += decipher.final("utf8");
+                        
                         if(decryptedData === getPassword){
                             req.session.username = getUserName;
                             console.log(req.session);

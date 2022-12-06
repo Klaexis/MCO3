@@ -24,6 +24,8 @@ app.post('/createaccount', checkAuth, main.createUser);
 app.get('/Home', isAuth, main.loadHome);
 app.post('/Home', isAuth, main.loadHome);
 
+app.get('/About', isAuth, main.loadAbout);
+
 //Profile Page
 app.get('/Profile', isAuth, profile.loadProfile);
 
