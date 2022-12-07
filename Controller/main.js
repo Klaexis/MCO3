@@ -1,6 +1,7 @@
 const User = require('../Database/Models/User');
 const Art = require('../Database/Models/Art.js');
 const Artist = require('../Database/Models/Artist.js');
+const Cart = require('../Database/Models/cart.js');
 
 const crypto = require("../public/Javascript/crypto.js");
 
@@ -66,6 +67,8 @@ const main = {
                     res.redirect('/Register');
                 }
                 else{
+                    Cart.create({username: username, artNames:[]});
+                    
                     console.log("Register Success");
                     res.redirect('/');
                 }
