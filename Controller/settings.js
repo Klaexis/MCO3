@@ -44,6 +44,7 @@ const Settings = {
            }
            else if(err){
                console.log(err);
+               req.flash('errorMsg', 'UPDATE FAILED');
                res.redirect('/Settings');
            }
         }); 

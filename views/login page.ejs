@@ -19,8 +19,13 @@
         
         <div class="login-proper">
             <div class="form">
+                
                 <form action="/verify" method="POST">
-                    <br><br>
+                    <br>
+                    <% if(errorMsg) { %>    
+                        <p style="font-size:140%; color:red"><b> <%= errorMsg %> </b></p>
+                    <% } %>
+                    <br>
                     <label for="username">Username</label><br>
                     <input type="text" id="fname" name="username"><br><br>
                     <label for="password">Password</label><br>

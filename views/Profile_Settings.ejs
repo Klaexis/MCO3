@@ -17,6 +17,11 @@
                             <div class="card h-100">
                                 <div class="card-body">
                                     <div class="row gutters">
+                                        <% if(errorMsg) { %>    
+                                            <p style="font-size:140%; color:red"><b> <%= errorMsg %> </b></p>
+                                        <% } %>
+                                    </div>
+                                    <div class="row gutters">
                                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                             <h5 class="mb-2" style="color:red;">Username: <%=userDetails.username%></h5>
                                         </div>

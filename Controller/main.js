@@ -45,7 +45,7 @@ const main = {
         
         //If username already exists then error
         if(checkUsername !== null){
-            req.flash('error_msg', "Username already exists");
+            req.flash('errorMsg', "USERNAME ALREADY EXISTS");
             res.redirect('/Register');
         }
         //If username does not exist 
@@ -62,6 +62,7 @@ const main = {
                 function(err){
                 if(err){
                     console.log("Register Failed");
+                    req.flash('errorMsg', 'REGISTER FAILED');
                     res.redirect('/Register');
                 }
                 else{
@@ -98,11 +99,13 @@ const main = {
                         }
                         else{
                             console.log("Invalid Login");
+                            req.flash('errorMsg', 'INVALID LOGIN');
                             res.redirect('/');
                         }
                     }
                     else{ //If User does not exist
                         console.log('Username not found');
+                        req.flash('errorMsg', 'USERNAME NOT FOUND');
                         res.redirect('/');
                     }
                 }

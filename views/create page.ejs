@@ -25,6 +25,9 @@
 
         <div class="login-proper">
             <div>
+                <% if(errorMsg) { %>    
+                    <p style="font-size:140%; color:red"><b> <%= errorMsg %> </b></p>
+                <% } %>
                 <form class="form-type" action="/createaccount" method="post">
                     <div class="mb-3">
                         <label for="emailInput" class="form-label">Email address</label>
